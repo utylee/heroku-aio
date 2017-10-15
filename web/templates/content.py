@@ -5,7 +5,7 @@ from functools import lru_cache
 index = {
     "what_is_this": """
 
-This application is a starter template for building real-time web apps. It's running on a
+This application is 현대걸 사랑해 a starter template for building real-time web apps. It's running on a
 Python [aiohttp]("http://aiohttp.readthedocs.io/") server. The above "Server Ticks"
 timestamps are sent from the server and subscribed to using the
 [EventSource]("https://developer.mozilla.org/en/docs/Web/API/EventSource") API.
