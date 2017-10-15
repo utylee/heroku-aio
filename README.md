@@ -1,4 +1,4 @@
-Heroku aiohttp Web Template
+Utylee's Heroku aiohttp Web Template
 ===========================
 
 An opinionated project template for deploying an [aiohttp](https://github.com/KeepSafe/aiohttp/)
