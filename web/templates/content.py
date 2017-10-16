@@ -21,6 +21,8 @@ Its features include:
 - file upload support
 - a growing library of tools: [aio-libs](https://github.com/aio-libs/)
 
+    당신은 사랑받기 위해 태어난 사람
+
     """,
 
     "where_next": """
