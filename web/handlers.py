@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 @aiohttp_jinja2.template('index.jinja2')
 async def index(request):
     return {
-        'title': 'Heroku aiohttp Web Template',
+        'title': '이태윤 좀 짱이듯',
         'gh_repo_url': 'https://github.com/sseg/heroku-aiohttp-web',
         'bootstrap_css_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
         'bootstrap_js_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',

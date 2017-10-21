@@ -5,6 +5,7 @@ from functools import lru_cache
 index = {
     "what_is_this": """
 
+야 시작이다. 야~야야야야~~ 손뼉치며 야~~야 야 야야~~!!
 This application is 현대걸 사랑해 a starter template for building real-time web apps. It's running on a
 Python [aiohttp]("http://aiohttp.readthedocs.io/") server. The above "Server Ticks"
 timestamps are sent from the server and subscribed to using the
@@ -19,6 +20,13 @@ Its features include:
 - websockets
 - file upload support
 - a growing library of tools: [aio-libs](https://github.com/aio-libs/)
+
+예제입니다:
+
+    당신은 사랑받기 위해 태어난 사람
+    $ 왜 안됩니까
+
+
 
     """,
 
