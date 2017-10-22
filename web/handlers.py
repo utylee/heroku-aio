@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 @aiohttp_jinja2.template('index.jinja2')
 async def index(request):
     return {
-        'title': '이태윤 좀 짱이듯',
+        'title': 'Heroku aiohttp Web Template',
         'gh_repo_url': 'https://github.com/sseg/heroku-aiohttp-web',
         'bootstrap_css_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css',
         'bootstrap_js_url': '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',
@@ -29,6 +29,11 @@ async def index(request):
     }
 
 
+''' 
+    utylee home server들의 status를 확인하는 용도의 프로세스로 활용하기로
+    websocket이 아닌 간편하게 SSE를 사용하던데 이  프로세스에 덧붙이기로.
+'''
+    
 async def tick(request):
     if 'text/event-stream' not in request.headers.getall('ACCEPT', []):
         raise HTTPNotAcceptable(reason="'text/event-stream' not found in Accept headers.")
@@ -54,7 +59,7 @@ async def tick(request):
             payload = json.dumps({'data': ts})
             resp.write(build_message(payload, id=ts, event='tick'))
             await resp.drain()
-            await asyncio.sleep(1)
+            await asyncio.sleep(10)
 
     finally:
         request.app.connections.remove(resp)
