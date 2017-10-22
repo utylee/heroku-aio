@@ -55,11 +55,24 @@ async def tick(request):
     resp.should_stop = False
     try:
         while not resp.should_stop:
-            ts = time.monotonic()
+            #ts = time.monotonic()
+            fut = asyncio.open_connection('utylee.dlinkddns.com', 1117, loop=loop)
+            try:
+                reader, writer = await asyncio.wait_for(fut, timeout=3)
+            except:
+                ts = 'exception, maybe Timeout...'
+                print(ts)
+                return
+
+            writer.write('utyleeping'.encode())
+            rbuf = await reader.read(100)
+            print(f'rbuf:{rbuf}')
+            ts = rbuf.decode()
+
             payload = json.dumps({'data': ts})
             resp.write(build_message(payload, id=ts, event='tick'))
             await resp.drain()
-            await asyncio.sleep(10)
+            await asyncio.sleep(5)
 
     finally:
         request.app.connections.remove(resp)
