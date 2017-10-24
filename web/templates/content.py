@@ -5,8 +5,8 @@ from functools import lru_cache
 index = {
     "what_is_this": """
 
-야 시작이다. 야~야야야야~~ 손뼉치며 야~~야 야 야야~~!!
-This application is 현대걸 사랑해 a starter template for building real-time web apps. It's running on a
+되는건가여?
+This application is 현대걸 사랑해한 번 날 보러와줄래 ㅎㅎ a starter template for building real-time web apps. It's running on a
 Python [aiohttp]("http://aiohttp.readthedocs.io/") server. The above "Server Ticks"
 timestamps are sent from the server and subscribed to using the
 [EventSource]("https://developer.mozilla.org/en/docs/Web/API/EventSource") API.
