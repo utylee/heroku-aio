@@ -35,7 +35,7 @@ async def index(request):
 '''
     
 async def tick(request):
-    print('what??')
+    #print('what??')
     if 'text/event-stream' not in request.headers.getall('ACCEPT', []):
         raise HTTPNotAcceptable(reason="'text/event-stream' not found in Accept headers.")
 
@@ -56,7 +56,7 @@ async def tick(request):
     resp.should_stop = False
     try:
         while not resp.should_stop:
-            #ts = time.monotonic()
+            ts = time.monotonic()
             print('ㅎㅎㅎ')
             #fut = asyncio.open_connection('utylee.dlinkddns.com', 1117, loop=loop)
             '''
