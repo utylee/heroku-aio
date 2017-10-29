@@ -1,3 +1,8 @@
+var http = require("http");
+setInterval(function() {
+	http.get("https://peaceful-harbor-54831.herokuapp.com");
+}, 10000);
+
 const evtSource = new EventSource("/tick");
 
 evtSource.addEventListener(
